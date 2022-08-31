@@ -19,11 +19,21 @@ export const rootStyle= {
 export const mainStyle = {
   width: "100vw",
   height : "50vh",
-  backgroundColor:"black"
+  backgroundColor:"lightgray"
 }
-export const article_centerStyling = {
+export const article_prevNextStyle = {
+  width : "10vw",
+  height : "50vh",
+  backgroundColor: "ligthgray",
+  color:"gray"
+}
+export const article_centerStyle = {
   width : "80vw",
   height : "50vh",
   backgroundColor : "white"
+}
+export const slideBoxStyle = {
+  width : "inherit",
+  height : "inherit",
 }
 
