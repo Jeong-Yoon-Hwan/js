@@ -21,4 +21,9 @@ export const mainStyle = {
   height : "50vh",
   backgroundColor:"black"
 }
+export const article_centerStyling = {
+  width : "80vw",
+  height : "50vh",
+  backgroundColor : "white"
+}
 
