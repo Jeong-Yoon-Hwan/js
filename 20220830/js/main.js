@@ -59,7 +59,8 @@ flexSet(article_next,'row','center','center');
 
 elementStyling(slideBox,slideBoxStyle);
 
+//-------------------------------------------------------
 
-pokeAPI();
+pokeAPI(1);  
 
 

@@ -1,9 +1,10 @@
 
-export function pokeAPI(){
+export function pokeAPI(count){
   let pokeURL = "https://pokeapi.co/api/v2/pokemon";
-  fetch(`${pokeURL}/1`)
+  fetch(`${pokeURL}/${count}`)
   .then(response => response.json())
   .then(json => {
-    console.dir(json);
+    console.log(json);
+   
   })
 }
