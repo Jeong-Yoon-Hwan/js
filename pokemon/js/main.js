@@ -61,6 +61,6 @@ elementStyling(slideBox,slideBoxStyle);
 
 //-------------------------------------------------------
 
-pokeAPI(1);  
+pokeAPI();  
 
 
