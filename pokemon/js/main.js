@@ -35,9 +35,7 @@ article_center.innerHTML=`${createElement("ul")}`;
 //* slideBox 선언 (ul)
 export const slideBox = document.querySelector("#root > main > article:nth-child(2) > ul");
 
-export const slideList = document.querySelectorAll("#root > main > article:nth-child(2) > ul > li");
-
-
+export const slideList = document.querySelectorAll("#root > main > article:nth-child(2) > ul > div");
 //* footer 선언
 const footer = document.querySelector("#root > footer");
 
@@ -61,13 +59,11 @@ elementStyling(article_next,stylelist.article_prevNext);
 flexSet(article_next,'row','center','center');
 
 elementStyling(slideBox,stylelist.slideBox); //* ul 스타일
-//elementStyling(slideList,stylelist.slideList);
 
 
 //-------------------------------------------------------
-for(let i=0;i<5;i++){
-  pokeAPI(i);
-}
 
+pokeAPI(4);
 
+const slidList = document.querySelector("#root > main > article:nth-child(2) > ul > li > div");
 

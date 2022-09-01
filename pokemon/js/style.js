@@ -1,6 +1,8 @@
 export function elementStyling(element, styleProps){
-  for(const key in styleProps){
-    element.style[key] = styleProps[key];
+  if(typeof(element==="object")&& typeof(styleProps==="object")){
+    for(const key in styleProps){
+      element.style[key] = styleProps[key];
+    }
   }
 }
 
@@ -12,7 +14,7 @@ export function flexSet(element,direction,justify,align){
 }
 
 export const stylelist ={
-  root : {
+  root :  {
     width:"100vw",
     height:"100vh",
     backgroundColor:"beige"
@@ -25,7 +27,9 @@ export const stylelist ={
   article_center :{
     width : "80vw",
     height : "50vh",
-    backgroundColor : "white"
+    backgroundColor : "white",
+    overflow:"hidden",
+    position:"relative"
   },
   article_prevNext : {
     width : "10vw",
@@ -34,9 +38,16 @@ export const stylelist ={
     color:"gray"
   },
   slideBox : {
-    width : "80vw",
+    width : "max-content",
     height : "40vh",
-    backgroundColor:"gray"
+    backgroundColor:"gray",
+    gap : "10px",
+    display:"flex",
+    justifyContent:"center",
+    alignItems:"center",
+    position:"absolute",
+    left:"-10px"
+    
   },
   slideList :{
     width : "10vw",
