@@ -1,5 +1,5 @@
 import createElement from "./makeTag.js";
-import { elementStyling, flexSet, mainStyle, rootStyle, article_centerStyle, slideBoxStyle, article_prevNextStyle} from "./style.js";
+import { elementStyling, flexSet, stylelist} from "./style.js";
 import { pokeAPI } from "./api.js";
 
 //*root 선언
@@ -30,9 +30,12 @@ article_next.innerHTML=`<span style="font-size:3em" class="material-symbols-outl
 article_prev.innerHTML=`<span style="font-size:3em" class="material-symbols-outlined">arrow_back_ios</span>`
 
 //*slideBox 생성
-article_center.innerHTML=`${createElement("div")}`;
-//* slideBox 선언
-const slideBox = document.querySelector("#root > main > article:nth-child(2) > div");
+article_center.innerHTML=`${createElement("ul")}`;
+
+//* slideBox 선언 (ul)
+export const slideBox = document.querySelector("#root > main > article:nth-child(2) > ul");
+
+export const slideList = document.querySelectorAll("#root > main > article:nth-child(2) > ul > li");
 
 
 //* footer 선언
@@ -42,25 +45,29 @@ const footer = document.querySelector("#root > footer");
 
 //======================================================================
 
-elementStyling(root,rootStyle); //* root 스타일링
+elementStyling(root,stylelist.root); //* root 스타일링
 flexSet(root,'row','center','center');
 
-elementStyling(main,mainStyle); //* main 스타일링
+elementStyling(main,stylelist.main); //* main 스타일링
 flexSet(main,'row','center','center');
 
-elementStyling(article_center,article_centerStyle); //* article_cneter 스타일링
+elementStyling(article_center,stylelist.article_center); //* article_cneter 스타일링
 flexSet(article_center,'row','center','center');
 
 //* prev, next 스타일
-elementStyling(article_prev,article_prevNextStyle);
+elementStyling(article_prev,stylelist.article_prevNext);
 flexSet(article_prev,'row','center','center');
-elementStyling(article_next,article_prevNextStyle);
+elementStyling(article_next,stylelist.article_prevNext);
 flexSet(article_next,'row','center','center');
 
-elementStyling(slideBox,slideBoxStyle);
+elementStyling(slideBox,stylelist.slideBox); //* ul 스타일
+//elementStyling(slideList,stylelist.slideList);
+
 
 //-------------------------------------------------------
+for(let i=0;i<5;i++){
+  pokeAPI(i);
+}
 
-pokeAPI();  
 
 

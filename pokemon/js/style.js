@@ -11,29 +11,37 @@ export function flexSet(element,direction,justify,align){
   element.style.alignItems=align;
 }
 
-export const rootStyle= {
-  width:"100vw",
-  height:"100vh",
-  backgroundColor:"beige"
-}
-export const mainStyle = {
-  width: "100vw",
-  height : "50vh",
-  backgroundColor:"lightgray"
-}
-export const article_prevNextStyle = {
-  width : "10vw",
-  height : "50vh",
-  backgroundColor: "ligthgray",
-  color:"gray"
-}
-export const article_centerStyle = {
-  width : "80vw",
-  height : "50vh",
-  backgroundColor : "white"
-}
-export const slideBoxStyle = {
-  width : "inherit",
-  height : "inherit",
+export const stylelist ={
+  root : {
+    width:"100vw",
+    height:"100vh",
+    backgroundColor:"beige"
+  },
+  main : {
+    width: "100vw",
+    height : "50vh",
+    backgroundColor:"lightgray"
+  },
+  article_center :{
+    width : "80vw",
+    height : "50vh",
+    backgroundColor : "white"
+  },
+  article_prevNext : {
+    width : "10vw",
+    height : "50vh",
+    backgroundColor: "ligthgray",
+    color:"gray"
+  },
+  slideBox : {
+    width : "80vw",
+    height : "40vh",
+    backgroundColor:"gray"
+  },
+  slideList :{
+    width : "10vw",
+    height : "40vh",
+    backgroundColor:"cadetblue"
+  }
 }
 
