@@ -42,6 +42,11 @@ for(let i=0;i<thumnailList.length;i++){
   thumnailList[i].innerHTML=`${makeTag("div",2)}`;
 }
 
+for(let i=0;i<articleRight.children.length;i++){
+  thumnailList.push(articleRight.children[i]);  
+}
+
+console.log(thumnailList);
 
 
 elementStyling(root,domStyling.root);
@@ -50,6 +55,10 @@ elementStyling(main,domStyling.main);
 elementStyling(articleLeft,domStyling.articleLeft);
 elementStyling(articleCenter,domStyling.articleCenter);
 elementStyling(articleRight,domStyling.articleRight);
+
+for(let i=0;i<thumnailList.length;i++){
+  elementStyling(thumnailList[i],domStyling.thumnailBox);
+}
 
 
 

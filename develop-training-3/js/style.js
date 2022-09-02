@@ -1,3 +1,10 @@
+const styleSet = {
+  size: (element,widthValue,heightValue)=>{
+    element.style.width=widthValue;
+    element.style.height=heightValue;
+  }
+}
+
 
 export const domStyling = {
   body : {
@@ -8,11 +15,12 @@ export const domStyling = {
     alignItems: "center",
   },
   root : {
-    width:"50vw",
+    width:"100vw",
     height:"inherit",
     backgroundColor:"gray",
     display:"flex",
-    flexDirection:"column"
+    flexDirection:"column",
+    
   },
   header : {
     width:"inherit",
@@ -30,7 +38,7 @@ export const domStyling = {
     paddingRight: "1vw"
   },
   articleLeft : {
-    width:"25vw",
+    width:"60vw",
     height:"inherit",
     backgroundColor: "gray",
     display:"flex",
@@ -40,7 +48,7 @@ export const domStyling = {
     gap:"1vh"
   },
   articleCenter : {
-    width:"5vw",
+    width:"15vw",
     height:"inherit",
     backgroundColor:"cadetblue"
   },
@@ -50,10 +58,14 @@ export const domStyling = {
     gap: "2vw",
     display: "flex",
     flexDirection: "column"
+  },
+  thumnailBox : {
+    width:"inherit",
+    height:"25vh",
+    backgroundColor:"lightyellow",
+    display:"flex"
   }
 }
-
-
 
 
 export default domStyling;
