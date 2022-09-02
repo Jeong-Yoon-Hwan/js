@@ -1,5 +1,8 @@
 import makeTag from "./makeTag.js";
+import domStyling from "./style.js";
 
+
+import elementStyling from "./elementStyling.js";
 //* root 생성
 const root = document.getElementById('root');
 root.innerHTML=`
@@ -21,7 +24,9 @@ const articleRight = document.querySelector("#root > main > article:nth-child(3)
 articleLeft.innerHTML=`
   ${makeTag("section",3)}
 `;
-
+articleRight.innerHTML=`
+  ${makeTag("section",2)}
+`;
 
 //* thumnailList에 article 안에 있는section 을 배열로 push 해서 저장했음.
 const thumnailList = [];
@@ -29,7 +34,22 @@ for(let i=0;i<articleLeft.children.length;i++){
   thumnailList.push(articleLeft.children[i]);
 }
 
+let v =[root,header,main,articleLeft,articleCenter,articleRight];
 
+
+//* thumnail 생성
+for(let i=0;i<thumnailList.length;i++){
+  thumnailList[i].innerHTML=`${makeTag("div",2)}`;
+}
+
+
+
+elementStyling(root,domStyling.root);
+elementStyling(header,domStyling.header);
+elementStyling(main,domStyling.main);
+elementStyling(articleLeft,domStyling.articleLeft);
+elementStyling(articleCenter,domStyling.articleCenter);
+elementStyling(articleRight,domStyling.articleRight);
 
 
 
