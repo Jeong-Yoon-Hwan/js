@@ -35,7 +35,7 @@ article_center.innerHTML=`${createElement("ul")}`;
 //* slideBox 선언 (ul)
 export const slideBox = document.querySelector("#root > main > article:nth-child(2) > ul");
 
-export const slideList = document.querySelectorAll("#root > main > article:nth-child(2) > ul > div");
+// export const slideList = document.querySelectorAll("#root > main > article:nth-child(2) > ul > div");
 //* footer 선언
 const footer = document.querySelector("#root > footer");
 
@@ -65,5 +65,5 @@ elementStyling(slideBox,stylelist.slideBox); //* ul 스타일
 
 pokeAPI(4);
 
-const slidList = document.querySelector("#root > main > article:nth-child(2) > ul > li > div");
+export const slidList = document.querySelector("#root > main > article:nth-child(2) > ul > li > div");
 

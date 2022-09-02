@@ -7,7 +7,7 @@ function pokeObj(id,name){
 
 export function pokeAPI(count){
   for(let i=0;i<count;i++){
-    const _BASIC_URL = `https://pokeapi.co/api/v2/pokemon/${count+1}`;
+    const _BASIC_URL = `https://pokeapi.co/api/v2/pokemon/${i+1}`;
     const request = new XMLHttpRequest();
       request.open("GET", _BASIC_URL);
       request.responseType = "json";
@@ -15,9 +15,9 @@ export function pokeAPI(count){
       request.addEventListener('load', () => {
         const _POKEMON_API = request.response;
         
-        console.log(_POKEMON_API.id);
+        console.log(_POKEMON_API.name);
         let li = document.createElement("li");
-        li.innerHTML=`<div style="max-width:250px;width:35vw;height:250px;background-color:#333"></div>`;
+        li.innerHTML=`<div></div>`;
         slideBox.appendChild(li);
       });
   }
