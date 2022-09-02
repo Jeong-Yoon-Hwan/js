@@ -1,0 +1,63 @@
+*{box-sizing: border-box;margin:0;padding:0;}
+body{
+  width:100vw;
+  height:100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 전체 화면크기 */
+#root {
+  width:50vw;
+  height:inherit;
+  background-color:gray;
+  display: flex;
+  flex-direction: column;
+}
+/* 헤더 */
+#root > header {
+  width :inherit;
+  height: 5vh;
+  background-color: lightcoral;
+}
+
+#root > main  {
+  width : inherit;
+  height : 95vh;
+  background-color: lightgray;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  padding-right:1vw;
+}
+
+/* article 왼쪽  */
+#root > main > article:nth-child(1){
+  width:25vw;
+  height:inherit;
+  background-color: gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:1vh;
+}
+  #root > main > article:nth-child(1) > section {
+    width: 25vw;
+    height:25vh;
+    background-color: lightyellow;
+  }
+
+/* article 가운데 */
+#root > main > article:nth-child(2){
+  width: 5vw;
+  height:inherit;
+  background-color: cadetblue;
+}
+
+#root > main > article:nth-child(3){
+  width: 12vw;
+  height:inherit;
+  background-color: lightgreen;
+}
