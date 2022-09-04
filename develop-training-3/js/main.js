@@ -3,14 +3,11 @@ import domStyling from "./style.js";
 import thumnail from "./thumnail.js";
 import trainingData from "./data.js";
 import header from "./header.js";
-
-const imgCat = "./image/cat.jpg";
-const imgGorilla = "./image/gorilla.jpg";
-const imgLion = "./image/lion.jpg";
-const imgLion2 = "./image/lion-2.jpg";
-
-
 import elementStyling from "./elementStyling.js";
+import buttonEvent from "./buttonEvent.js";
+
+
+
 //* root 생성
 const root = document.getElementById('root');
 
@@ -46,6 +43,11 @@ elementStyling(articleRight,domStyling.articleRight);
 
 
 //thumnail===========
+const imgCat = "./image/cat.jpg";
+const imgGorilla = "./image/gorilla.jpg";
+const imgLion = "./image/lion.jpg";
+const imgLion2 = "./image/lion-2.jpg";
+
 thumnail(articleLeft,imgCat,trainingData.thumnailData[0].title,trainingData.thumnailData[0].author,trainingData.thumnailData[0].summary);
 
 thumnail(articleLeft,imgGorilla,trainingData.thumnailData[1].title,trainingData.thumnailData[1].author,trainingData.thumnailData[1].summary);
@@ -56,7 +58,7 @@ trainingData.thumnailData[2].author,trainingData.thumnailData[2].summary);
 thumnail(articleRight,imgLion2,trainingData.thumnailData[3].title,trainingData.thumnailData[3].author,trainingData.thumnailData[3].summary);
 
 
-
+arrowButton.addEventListener('click',buttonEvent);
 
 
 
