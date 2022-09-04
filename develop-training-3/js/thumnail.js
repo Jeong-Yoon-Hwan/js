@@ -28,20 +28,23 @@ export default function thumnail(parent,imgSrc,titleText,authorText,summaryText)
     const title = document.createElement("h1");
       title.innerHTML=titleText;
       textBox.appendChild(title);
-      
+    
+
+    //author 추가
     const author = document.createElement('p');
       author.innerHTML = authorText;
       author.style.fontSize="1em";
       textBox.appendChild(author);
 
+    //summary 추가
     const summary = document.createElement('p');
       summary.innerHTML = summaryText;
       summary.style.fontSize=".5em";
       textBox.appendChild(summary);
   
-  thumnailBox.appendChild(textBox);
 
-    
+  //textBox --> thumnailBox에 추가
+  thumnailBox.appendChild(textBox);
 
   parent.appendChild(thumnailBox);
   
