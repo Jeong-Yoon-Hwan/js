@@ -1,5 +1,11 @@
 import makeTag from "./makeTag.js";
 import domStyling from "./style.js";
+import thumnail from "./thumnail.js";
+import trainingData from "./data.js";
+
+const imgCat = "./image/cat.jpg";
+const imgGorilla = "./image/gorilla.jpg";
+const imgLion = "./image/lion.jpg";
 
 
 import elementStyling from "./elementStyling.js";
@@ -34,9 +40,6 @@ for(let i=0;i<articleLeft.children.length;i++){
   thumnailList.push(articleLeft.children[i]);
 }
 
-let v =[root,header,main,articleLeft,articleCenter,articleRight];
-
-
 //* thumnail 생성
 for(let i=0;i<thumnailList.length;i++){
   thumnailList[i].innerHTML=`${makeTag("div",2)}`;
@@ -46,9 +49,8 @@ for(let i=0;i<articleRight.children.length;i++){
   thumnailList.push(articleRight.children[i]);  
 }
 
-console.log(thumnailList);
 
-
+//* 스타일링-------------------
 elementStyling(root,domStyling.root);
 elementStyling(header,domStyling.header);
 elementStyling(main,domStyling.main);
@@ -56,9 +58,15 @@ elementStyling(articleLeft,domStyling.articleLeft);
 elementStyling(articleCenter,domStyling.articleCenter);
 elementStyling(articleRight,domStyling.articleRight);
 
-for(let i=0;i<thumnailList.length;i++){
-  elementStyling(thumnailList[i],domStyling.thumnailBox);
-}
+
+
+thumnail(articleLeft,imgCat,trainingData.thumnailData[0].title,trainingData.thumnailData[0].author,trainingData.thumnailData[0].summary);
+
+thumnail(articleLeft,imgGorilla,trainingData.thumnailData[1].title,trainingData.thumnailData[1].author,trainingData.thumnailData[1].summary);
+
+thumnail(articleLeft,imgLion,trainingData.thumnailData[2].title,
+trainingData.thumnailData[2].author,trainingData.thumnailData[2].summary);
+
 
 
 

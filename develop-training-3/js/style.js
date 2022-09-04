@@ -17,7 +17,7 @@ export const domStyling = {
   root : {
     width:"100vw",
     height:"inherit",
-    backgroundColor:"gray",
+    //backgroundColor:"gray",
     display:"flex",
     flexDirection:"column",
     
@@ -30,7 +30,7 @@ export const domStyling = {
   main : {
     width:"inherit",
     height: "95vh",
-    backgroundColor : "lightgray",
+   // backgroundColor : "lightgray",
     display:"flex",
     flexDirection: "row",
     justifyContent: "end",
@@ -40,7 +40,7 @@ export const domStyling = {
   articleLeft : {
     width:"60vw",
     height:"inherit",
-    backgroundColor: "gray",
+   // backgroundColor: "gray",
     display:"flex",
     flexDirection: "column",
     justifyContent:"center",
@@ -50,7 +50,7 @@ export const domStyling = {
   articleCenter : {
     width:"15vw",
     height:"inherit",
-    backgroundColor:"cadetblue"
+    //backgroundColor:"cadetblue"
   },
   articleRight : {
     width: "12vw",
@@ -60,10 +60,10 @@ export const domStyling = {
     flexDirection: "column"
   },
   thumnailBox : {
-    width:"inherit",
-    height:"25vh",
-    backgroundColor:"lightyellow",
-    display:"flex"
+    // width:"inherit",
+    // height:"25vh",
+    // backgroundColor:"lightyellow",
+    // display:"flex"
   }
 }
 
