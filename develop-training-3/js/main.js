@@ -6,6 +6,7 @@ import trainingData from "./data.js";
 const imgCat = "./image/cat.jpg";
 const imgGorilla = "./image/gorilla.jpg";
 const imgLion = "./image/lion.jpg";
+const imgLion2 = "./image/lion-2.jpg";
 
 
 import elementStyling from "./elementStyling.js";
@@ -27,27 +28,11 @@ const articleLeft = document.querySelector("#root > main > article:nth-child(1)"
 const articleCenter = document.querySelector("#root > main > article:nth-child(2)");
 const articleRight = document.querySelector("#root > main > article:nth-child(3)");
 
-articleLeft.innerHTML=`
-  ${makeTag("section",3)}
-`;
-articleRight.innerHTML=`
-  ${makeTag("section",2)}
-`;
-
-//* thumnailList에 article 안에 있는section 을 배열로 push 해서 저장했음.
-const thumnailList = [];
-for(let i=0;i<articleLeft.children.length;i++){
-  thumnailList.push(articleLeft.children[i]);
-}
-
-//* thumnail 생성
-for(let i=0;i<thumnailList.length;i++){
-  thumnailList[i].innerHTML=`${makeTag("div",2)}`;
-}
-
-for(let i=0;i<articleRight.children.length;i++){
-  thumnailList.push(articleRight.children[i]);  
-}
+articleCenter.innerHTML=`
+  ${makeTag("div",1)}
+`;  
+const arrowButton = document.querySelector("#root > main > article:nth-child(2) > div");
+arrowButton.innerHTML=`<span style="font-size:80px" class="material-symbols-outlined">arrow_right</span>`;
 
 
 //* 스타일링-------------------
@@ -66,6 +51,8 @@ thumnail(articleLeft,imgGorilla,trainingData.thumnailData[1].title,trainingData.
 
 thumnail(articleLeft,imgLion,trainingData.thumnailData[2].title,
 trainingData.thumnailData[2].author,trainingData.thumnailData[2].summary);
+
+thumnail(articleRight,imgLion2,trainingData.thumnailData[3].title,trainingData.thumnailData[3].author,trainingData.thumnailData[3].summary);
 
 
 

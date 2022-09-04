@@ -25,7 +25,7 @@ export const domStyling = {
   header : {
     width:"inherit",
     height: "5vh",
-    backgroundColor : "lightcoral"
+    backgroundColor : "lightgray"
   },
   main : {
     width:"inherit",
@@ -50,21 +50,20 @@ export const domStyling = {
   articleCenter : {
     width:"15vw",
     height:"inherit",
-    //backgroundColor:"cadetblue"
+    display:"flex",
+    justifyContent:"end",
+    alignItems:"center"
   },
   articleRight : {
     width: "12vw",
     height:"inherit",
     gap: "2vw",
     display: "flex",
-    flexDirection: "column"
+    flexDirection: "column",
+    justifyContent:"center",
+    alignItems:"center",
+    flexWrap:"wrap"
   },
-  thumnailBox : {
-    // width:"inherit",
-    // height:"25vh",
-    // backgroundColor:"lightyellow",
-    // display:"flex"
-  }
 }
 
 

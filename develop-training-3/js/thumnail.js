@@ -6,6 +6,7 @@ export default function thumnail(parent,imgSrc,titleText,authorText,summaryText)
     thumnailBox.style.height="30%";
     thumnailBox.style.backgroundColor="white";
     thumnailBox.style.display="flex";
+    thumnailBox.style.flexWrap="wrap";
     
     
 //img추가
@@ -20,7 +21,8 @@ export default function thumnail(parent,imgSrc,titleText,authorText,summaryText)
     textBox.style.display="flex";
     textBox.style.flexDirection="column";
     textBox.style.justifyContent="end";
-    textBox.style.flexWrap="wrap";
+    
+    textBox.style.width="500px";
 
     //title 추가
     const title = document.createElement("h1");
