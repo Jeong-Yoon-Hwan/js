@@ -1,6 +1,7 @@
 import createElement from "./makeTag.js";
 import { elementStyling, flexSet, stylelist} from "./style.js";
 import { pokeAPI } from "./api.js";
+import nextEvent from "./nextEvent.js";
 
 //*root 선언
 const root = document.getElementById('root');
@@ -63,7 +64,9 @@ elementStyling(slideBox,stylelist.slideBox); //* ul 스타일
 
 //-------------------------------------------------------
 
-pokeAPI(4);
+pokeAPI(20);
 
-export const slidList = document.querySelector("#root > main > article:nth-child(2) > ul > li > div");
+article_next.addEventListener("click",nextEvent);
+
+
 
