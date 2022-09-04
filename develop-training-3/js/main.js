@@ -45,7 +45,7 @@ elementStyling(articleRight,domStyling.articleRight);
 
 
 
-//thumnail
+//thumnail===========
 thumnail(articleLeft,imgCat,trainingData.thumnailData[0].title,trainingData.thumnailData[0].author,trainingData.thumnailData[0].summary);
 
 thumnail(articleLeft,imgGorilla,trainingData.thumnailData[1].title,trainingData.thumnailData[1].author,trainingData.thumnailData[1].summary);
@@ -54,6 +54,8 @@ thumnail(articleLeft,imgLion,trainingData.thumnailData[2].title,
 trainingData.thumnailData[2].author,trainingData.thumnailData[2].summary);
 
 thumnail(articleRight,imgLion2,trainingData.thumnailData[3].title,trainingData.thumnailData[3].author,trainingData.thumnailData[3].summary);
+
+
 
 
 

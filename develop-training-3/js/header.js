@@ -13,10 +13,8 @@ function header(parent,...listName){
     header.appendChild(ul);
   
   ul.innerHTML=`${makeTag("li",...listName)}`;
-
   parent.appendChild(header);
 }
-
 
 function makeTag(tagName,...listName){ //인자를 배열로 받아옴
   const list = [...listName]; //받아온 배열 list에 저장
@@ -26,6 +24,7 @@ function makeTag(tagName,...listName){ //인자를 배열로 받아옴
   }
   return element.join("");
 }
+
 
 
 export default header;
