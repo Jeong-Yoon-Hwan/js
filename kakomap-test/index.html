@@ -11,10 +11,17 @@
     <div id="clickLatlng"></div>
     
 	<script>
-
+    //현재 위도 경도
+    window.navigator.geolocation.getCurrentPosition(function(pos){
+          
+    
         const container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+
+      
         const options = { //지도를 생성할 때 필요한 기본 옵션
-            center: new kakao.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
+
+          //center << 에 현재 위치 위도경로로 저장했음
+            center: new kakao.maps.LatLng(pos.coords.latitude,pos.coords.longitude), //지도의 중심좌표.
             level: 3 //지도의 레벨(확대, 축소 정도)
             // disableClickZoom: true // 클러스터 마커를 클릭했을 때 지도가 확대되지 않도록 설정한다
         };
@@ -53,9 +60,11 @@
             let resultDiv = document.getElementById('clickLatlng'); 
             resultDiv.innerHTML = message;
             
-            
         });
         console.log(kakao);
+
+
+    });
 	</script>
 
 </body>
