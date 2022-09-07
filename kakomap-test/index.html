@@ -45,7 +45,6 @@
         // 지도에 클릭 이벤트를 등록합니다
         // 지도를 클릭하면 마지막 파라미터로 넘어온 함수를 호출합니다
         kakao.maps.event.addListener(map, 'click', function(mouseEvent) {        
-            
             // 클릭한 위도, 경도 정보를 가져옵니다 
             let latlng = mouseEvent.latLng; 
             
@@ -59,6 +58,10 @@
             // 'clickLatlng'라는 아이디값을 가진 <div> 태그의 innerHTML 으로 위 메세지를 설정합니다.
             let resultDiv = document.getElementById('clickLatlng'); 
             resultDiv.innerHTML = message;
+            
+            //선택한 마크를 중심으로 화면 이동 
+            var moveLatLng = new kakao.maps.LatLng(latlng.getLat(), latlng.getLng());   
+            map.panTo(moveLatLng);
             
         });
         console.log(kakao);
