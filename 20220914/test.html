@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root"></div>
+  <script>
+    class EelementMaker{
+      constructor(tagName,width,backgroundColor,content =""){
+        this.tagName = tagName;
+        this.width = width;
+        this.backgroundColor = backgroundColor;
+        this.content = content;
+      }
+
+      set tagName(value){
+        if(typeof value === "string"){
+          return this._tagName = value;
+        }
+      }
+      set width(value){
+        return this._width = Number.isInteger(value) ? value : console.error("need integer");
+      }
+      get height(){
+        return this._width / 2;
+      }
+      makeElement(){
+        return `<${this._tagName} style="width:${this._width}px; height:${this.height}px;background-color:${this.backgroundColor}">${this.content}</${this._tagName}>`;
+      }
+      
+    }
+
+    const root = document.getElementById('root');
+    const fromConstructFunc = new EelementMaker("div",200,"salmon","hello");
+
+    console.log(fromConstructFunc);
+    root.innerHTML = fromConstructFunc.makeElement();
+    
+    
+  </script>
+</body>
+</html>
